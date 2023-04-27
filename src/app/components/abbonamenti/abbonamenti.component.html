@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Codice Abbonamento</th>
+        <th scope="col">Data Inizio</th>
+        <th scope="col">Data Fine</th>
+        <th scope="col">Prezzo</th>
+        <th scope="col">Codice persona</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of abbonamenti" [ngClass]="{ 'abbonamento-scaduto': isScaduto(a.data_fine) }">
+        <td>{{a.codice_abbonamento}}</td>
+        <td>{{a.data_inizio | date:'shortDate'}}</td>
+        <td>{{a.data_fine | date:'shortDate'}}</td>
+        <td>{{a.prezzo}}</td>
+        <td>{{a.persona.codice_persona}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
