@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ServiceService } from 'src/app/services/service.service';
 
+
 @Component({
   selector: 'app-persone',
   templateUrl: './persone.component.html',

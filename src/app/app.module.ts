@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { CorsiComponent } from './components/corsi/corsi.component';
 import { AbbonamentiComponent } from './components/abbonamenti/abbonamenti.component';
 import { PersoneComponent } from './components/persone/persone.component';
 import { SeguitiComponent } from './components/seguiti/seguiti.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { SeguitiComponent } from './components/seguiti/seguiti.component';
     CorsiComponent,
     AbbonamentiComponent,
     PersoneComponent,
-    SeguitiComponent
+    SeguitiComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
